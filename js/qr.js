@@ -54,7 +54,7 @@ document.addEventListener("DOMContentLoaded", () => {
       qrText.textContent = "ERROR al generar QR: " + (err?.message || err);
     }
   }
-
+//
   // URL guardada / default
   const saved = localStorage.getItem("ih_forms_url");
   urlInput.value = saved || "https://forms.office.com/";
