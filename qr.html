@@ -1,0 +1,51 @@
+<!doctype html>
+<html lang="es">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>InstaHistory — QR</title>
+  <link rel="stylesheet" href="css/styles.css" />
+</head>
+<body class="bg">
+  <header class="topbar">
+    <div class="brand">
+      <span class="dot"></span>
+      <strong>InstaHistory</strong>
+      <span class="muted">| QR</span>
+    </div>
+
+    <nav class="actions">
+      <a class="btn secondary" href="experience.html">Volver</a>
+      <button id="logout" class="btn danger">Salir</button>
+    </nav>
+  </header>
+
+  <main class="card wide">
+    <h2 class="h2">Escanea para continuar</h2>
+    <p class="muted">
+      Este QR puede apuntar a Microsoft Forms o a una página de referencias.
+    </p>
+
+    <div class="qrBox">
+        <img
+        src="assets/qrppt.png"
+        alt="Código QR para continuar"
+        class="qrImage"
+         />
+
+        <p class="muted small">
+        Escanea el QR para abrir el enlace en tu celular.
+        </p>
+
+        <a class="link" href="https://view.genially.com/68db0c31743c13b46e8cdb86"
+         target="_blank" rel="noopener">
+         Abrir enlace
+        </a>
+    </div>
+  </main>
+
+  <!-- QR Code (librería pequeña) -->
+  <script src="https://cdn.jsdelivr.net/npm/qrcode@1.5.3/build/qrcode.min.js"></script>
+  <script src="js/qr.js"></script>
+</body>
+</html>

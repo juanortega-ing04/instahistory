@@ -1,0 +1,47 @@
+<!doctype html>
+<html lang="es">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>InstaHistory — Experiencia</title>
+  <link rel="stylesheet" href="css/styles.css" />
+</head>
+<body class="bg">
+  <header class="topbar">
+    <div class="brand">
+      <span class="dot"></span>
+      <strong>InstaHistory</strong>
+      <span class="muted">| Experiencia</span>
+    </div>
+
+    <nav class="actions">
+      <button id="goQR" class="btn secondary">Ir a QR</button>
+      <button id="logout" class="btn danger">Salir</button>
+    </nav>
+  </header>
+
+  <main class="stage">
+    <section class="hud">
+      <h2 class="h2">Interacción 3D</h2>
+      <p class="muted">
+        Arrastra para rotar. Pellizca/rueda para zoom (iPad/PC).
+      </p>
+
+      <div class="row">
+        <label class="inline">
+          Intensidad holograma
+          <input id="holo" type="range" min="0" max="100" value="60" />
+        </label>
+        <button id="reset" class="btn secondary">Reiniciar vista</button>
+      </div>
+    </section>
+
+    <section class="canvasWrap">
+      <canvas id="threeCanvas"></canvas>
+      <div class="badge">WebGL / Three.js</div>
+    </section>
+  </main>
+
+  <script type="module" src="./js/experience.js"></script>
+</body>
+</html>
