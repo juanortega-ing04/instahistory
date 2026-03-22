@@ -3,7 +3,7 @@
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width,initial-scale=1" />
-  <title>InstaHistory — Experiencia</title>
+  <title>InstaHistory — Visor OBJ</title>
   <link rel="stylesheet" href="css/styles.css" />
 </head>
 <body class="bg">
@@ -11,7 +11,7 @@
     <div class="brand">
       <span class="dot"></span>
       <strong>InstaHistory</strong>
-      <span class="muted">| Experiencia</span>
+      <span class="muted">| Visor OBJ</span>
     </div>
 
     <nav class="actions">
@@ -22,23 +22,37 @@
 
   <main class="stage">
     <section class="hud">
-      <h2 class="h2">Interacción 3D</h2>
+      <h2 class="h2">Modelos OBJ</h2>
       <p class="muted">
-        Arrastra para rotar. Pellizca/rueda para zoom (iPad/PC).
+        Los modelos se leen automáticamente desde <strong>assets/modelos</strong>.
       </p>
 
-      <div class="row">
-        <label class="inline">
-          Intensidad holograma
-          <input id="holo" type="range" min="0" max="100" value="60" />
-        </label>
-        <button id="reset" class="btn secondary">Reiniciar vista</button>
+      <div class="stack">
+        <span class="label">Modelos disponibles</span>
+        <div id="modelsList" class="modelsList">
+          <p class="muted">Buscando modelos...</p>
+        </div>
+      </div>
+
+      <div class="stack">
+        <label for="modelOpacity" class="label">Opacidad del modelo</label>
+        <input id="modelOpacity" type="range" min="20" max="100" value="100" />
+      </div>
+
+      <div class="row wrap">
+        <button id="resetView" class="btn secondary">Reiniciar vista</button>
+        <button id="clearModel" class="btn secondary">Quitar modelo</button>
+      </div>
+
+      <div class="stack">
+        <span class="label">Estado</span>
+        <p id="statusText" class="muted">Esperando selección...</p>
       </div>
     </section>
 
     <section class="canvasWrap">
       <canvas id="threeCanvas"></canvas>
-      <div class="badge">WebGL / Three.js</div>
+      <div class="badge">OBJ Preview</div>
     </section>
   </main>
 
